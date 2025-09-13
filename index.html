@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DriverRoom - The Next Generation of Fleet Management</title>
+    <title>DriverRoom - Secure Fleet Management</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,14 +14,13 @@
             font-family: 'Inter', sans-serif;
         }
         .bg-brand-teal { background-color: #008080; }
-        .text-brand-teal { color: #008080; } /* Added this line for high contrast */
+        .text-brand-teal { color: #008080; }
         .text-brand-salmon { color: #FA8072; }
         .hover\:text-brand-salmon:hover { color: #FA8072; }
     </style>
 </head>
 <body class="antialiased bg-white">
 
-    <!-- Header -->
     <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3">
@@ -37,14 +36,12 @@
             <a href="contact.html" class="hidden md:block bg-brand-teal text-white font-semibold px-5 py-2 rounded-lg hover:bg-opacity-90 transition-transform duration-300 hover:scale-105">
                 Contact Us
             </a>
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="md:hidden">
                 <svg class="w-6 h-6 text-gray-800" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </nav>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
             <a href="index.html" class="mobile-nav-link block py-2 text-brand-salmon font-semibold">Home</a>
             <a href="features.html" class="mobile-nav-link block py-2 text-gray-600 hover:text-brand-salmon">Features</a>
@@ -54,13 +51,11 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
         <section class="relative bg-gradient-to-br from-gray-800 to-brand-teal">
             <div class="container mx-auto px-6 py-24 md:py-32 text-center text-white">
-                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">Stop Wasting Time at the Gate.</h1>
-                <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-200">DriverRoom is the all-in-one platform that connects your drivers, dispatchers, and management for ultimate fleet efficiency.</p>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">Your Fleet's Access, Secured. Your Time, Saved.</h1>
+                <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-200">DriverRoom is the all-in-one platform that connects your drivers, dispatchers, and management with an unmatched focus on security and efficiency.</p>
                 <div class="mt-8 flex justify-center space-x-4">
                     <a href="features.html" class="bg-brand-teal text-white font-semibold px-6 py-3 rounded-lg hover:bg-opacity-90 transition-transform duration-300 hover:scale-105 ring-1 ring-white/50">Explore Features</a>
                     <a href="pricing.html" class="bg-white text-brand-teal font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-300">View Pricing</a>
@@ -68,7 +63,6 @@
             </div>
         </section>
 
-        <!-- Key Features Section -->
         <section class="py-20 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
@@ -76,24 +70,21 @@
                     <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">DriverRoom solves the biggest challenges in last-mile delivery with a powerful, easy-to-use platform.</p>
                 </div>
                 <div class="grid md:grid-cols-3 gap-10">
-                    <!-- Feature Card -->
                     <div class="text-center p-8 bg-white rounded-lg shadow-lg">
                         <div class="flex justify-center items-center h-16 w-16 bg-brand-teal text-white rounded-full mx-auto">
                            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                         </div>
-                        <h3 class="mt-5 text-xl font-semibold text-gray-800">Instant Gate Code Access</h3>
-                        <p class="mt-2 text-gray-600">Eliminate delays with a centralized, company-verified database of gate codes, accessible in real-time.</p>
+                        <h3 class="mt-5 text-xl font-semibold text-gray-800">Real-Time Verified Gate Codes</h3>
+                        <p class="mt-2 text-gray-600">Drivers get instant access to a constantly updated, company-verified database, ending frustrating delays and phone calls at the gate.</p>
                     </div>
-                    <!-- Feature Card -->
                     <div class="text-center p-8 bg-white rounded-lg shadow-lg">
                         <div class="flex justify-center items-center h-16 w-16 bg-brand-teal text-white rounded-full mx-auto">
                            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                         </div>
-                        <h3 class="mt-5 text-xl font-semibold text-gray-800">Enhanced Security</h3>
-                        <p class="mt-2 text-gray-600">Route-based access control ensures only on-duty drivers can view sensitive gate code information.</p>
+                        <h3 class="mt-5 text-xl font-semibold text-gray-800">Verified & Secure Gate Code Management</h3>
+                        <p class="mt-2 text-gray-600">Our platform uses route-based access control and two-factor authentication to ensure sensitive information is seen only by the right driver, at the right time. Your data is always encrypted and protected.</p>
                     </div>
-                     <!-- Feature Card -->
-                    <div class="text-center p-8 bg-white rounded-lg shadow-lg">
+                     <div class="text-center p-8 bg-white rounded-lg shadow-lg">
                         <div class="flex justify-center items-center h-16 w-16 bg-brand-teal text-white rounded-full mx-auto">
                             <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                         </div>
@@ -104,7 +95,6 @@
             </div>
         </section>
 
-        <!-- Why DriverRoom Section -->
         <section class="py-20">
             <div class="container mx-auto px-6 max-w-4xl">
                 <div class="text-center">
@@ -122,15 +112,14 @@
                     <div class="flex items-start space-x-4">
                         <div class="flex-shrink-0 bg-brand-teal text-white rounded-full p-2 mt-1"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div>
                         <div>
-                            <h4 class="text-xl font-semibold">Improve Driver Morale</h4>
-                            <p class="text-gray-600">By removing a primary source of daily stress and frustration, DriverRoom helps you retain your most valuable talent.</p>
+                            <h4 class="text-xl font-semibold">Built on a Foundation of Trust</h4>
+                            <p class="text-gray-600">We prioritize the security of your fleet's data, from gate codes to route information, with enterprise-grade encryption. This not only protects your business but also builds a foundation of trust with your drivers and clients.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
         <section class="bg-brand-teal">
             <div class="container mx-auto px-6 py-16 text-center">
                 <h2 class="text-3xl font-bold text-white">Ready to Transform Your Fleet?</h2>
@@ -143,7 +132,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -194,4 +182,3 @@
     </script>
 </body>
 </html>
-
