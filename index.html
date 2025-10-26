@@ -49,6 +49,7 @@
             <a href="features.html" class="mobile-nav-link block py-2 text-gray-600 hover:text-brand-salmon">Features</a>
             <a href="pricing.html" class="mobile-nav-link block py-2 text-gray-600 hover:text-brand-salmon">Pricing</a>
             <a href="about.html" class="mobile-nav-link block py-2 text-gray-600 hover:text-brand-salmon">About Us</a>
+            <button id="download-app-btn-mobile" class="mobile-nav-link block mt-4 bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white font-extrabold px-5 py-2 rounded-lg shadow-lg ring-2 ring-gray-700 hover:from-black hover:to-gray-900 transition-transform duration-300 hover:scale-105">Download the App</button>
             <a href="contact.html" class="mobile-nav-link block mt-4 bg-brand-teal text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-opacity-90">Contact Us</a>
         </div>
     </header>
@@ -200,18 +201,23 @@
             mobileMenu.classList.toggle('hidden');
         });
 
+
         // Modal logic
         const downloadBtn = document.getElementById('download-app-btn');
+        const downloadBtnMobile = document.getElementById('download-app-btn-mobile');
         const modal = document.getElementById('download-modal');
         const closeModal = document.getElementById('close-modal');
         const modalContent = document.getElementById('modal-content');
 
-        downloadBtn.addEventListener('click', () => {
+        function openDownloadModal() {
             modal.classList.remove('opacity-0', 'pointer-events-none');
             modal.classList.add('opacity-100');
             modalContent.classList.remove('translate-y-20');
             modalContent.classList.add('translate-y-0');
-        });
+        }
+
+        downloadBtn.addEventListener('click', openDownloadModal);
+        downloadBtnMobile.addEventListener('click', openDownloadModal);
 
         closeModal.addEventListener('click', () => {
             modal.classList.add('opacity-0', 'pointer-events-none');
