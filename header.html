@@ -1,0 +1,81 @@
+<!-- DriverRoom Header -->
+<header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center space-x-3">
+            <img src="assets/logoOnly.png" alt="DriverRoom Logo" class="h-10 w-10">
+            <span class="text-2xl font-bold text-gray-800">DriverRoom</span>
+        </a>
+        <div class="md:flex items-center space-x-4">
+            <a href="index.html" class="nav-link text-brand-salmon font-semibold transition-colors duration-300">Home</a>
+            <a href="features.html" class="nav-link text-gray-600 hover:text-brand-salmon transition-colors duration-300">Features</a>
+            <a href="pricing.html" class="nav-link text-gray-600 hover:text-brand-salmon transition-colors duration-300">Pricing</a>
+            <a href="about.html" class="nav-link text-gray-600 hover:text-brand-salmon transition-colors duration-300">About Us</a>
+            <div class="relative" id="download-app-container">
+                <button id="download-app-btn" class="bg-brand-salmon text-white font-semibold px-5 py-2 rounded-lg hover:bg-opacity-90 transition-transform duration-300 hover:scale-105 focus:outline-none">
+                    Download the App
+                </button>
+                <div id="download-app-modal" class="absolute left-0 w-64 mt-2 bg-white shadow-lg rounded-lg border border-gray-200 z-50 overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0; opacity:0;">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-2 text-brand-teal">Get DriverRoom</h3>
+                        <a href="https://apps.apple.com/us/app/driverroom/id6753841047" target="_blank" rel="noopener" class="flex items-center mb-3 bg-black text-white px-4 py-2 rounded hover:bg-gray-900 transition-colors duration-300">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.564 13.438c-.027-2.357 1.924-3.487 2.012-3.541-1.097-1.602-2.803-1.822-3.406-1.846-1.453-.146-2.842.853-3.584.853-.74 0-1.883-.832-3.099-.81-1.594.024-3.073.927-3.894 2.355-1.667 2.89-.426 7.162 1.197 9.513.796 1.154 1.744 2.448 2.991 2.401 1.206-.049 1.663-.776 3.124-.776 1.461 0 1.87.776 3.13.75 1.299-.025 2.117-1.174 2.91-2.33.62-.904.876-1.77.888-1.815-.02-.009-2.353-.902-2.38-3.573zm-3.236-6.563c.652-.792 1.094-1.892.974-2.995-.941.038-2.079.627-2.753 1.419-.604.703-1.135 1.832-.934 2.91 1.054.082 2.065-.537 2.713-1.334z"/></svg>
+                            iOS App Store
+                        </a>
+                        <a href="#" id="android-link" target="_blank" rel="noopener" class="flex items-center bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors duration-300">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M3.654 2.328l13.396 7.73-3.937 2.272-9.459-5.454c-.51-.295-.51-1.03 0-1.325zm-.654 1.325v16.694c0 .57.62.927 1.13.632l9.459-5.454-10.589-6.172zm11.459 6.172l3.937 2.272-13.396 7.73c-.51.295-1.13-.062-1.13-.632v-16.694c0-.57.62-.927 1.13-.632zm1.541 2.272l3.937 2.272-3.937 2.272v-4.544z"/></svg>
+                            Android Play Store
+                        </a>
+                        <p class="mt-2 text-xs text-gray-500">Android link coming soon.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="contact.html" class="bg-brand-teal text-white font-semibold px-5 py-2 rounded-lg hover:bg-opacity-90 transition-transform duration-300 hover:scale-105">
+                Contact Us
+            </a>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden">
+            <svg class="w-6 h-6 text-gray-800" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+        <a href="index.html" class="mobile-nav-link block py-2 text-brand-salmon font-semibold">Home</a>
+        <a href="features.html" class="mobile-nav-link block py-2 text-gray-600 hover:text-brand-salmon">Features</a>
+        <a href="pricing.html" class="mobile-nav-link block py-2 text-gray-600 hover:text-brand-salmon">Pricing</a>
+        <a href="about.html" class="mobile-nav-link block py-2 text-gray-600 hover:text-brand-salmon">About Us</a>
+        <a href="contact.html" class="mobile-nav-link block mt-4 bg-brand-teal text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-opacity-90">Contact Us</a>
+    </div>
+</header>
+<script>
+    // JavaScript for mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+    // Download App Modal logic
+    const downloadAppBtn = document.getElementById('download-app-btn');
+    const downloadAppModal = document.getElementById('download-app-modal');
+    const downloadAppContainer = document.getElementById('download-app-container');
+    let modalOpen = false;
+    downloadAppBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        modalOpen = !modalOpen;
+        if (modalOpen) {
+            downloadAppModal.style.maxHeight = '500px';
+            downloadAppModal.style.opacity = '1';
+        } else {
+            downloadAppModal.style.maxHeight = '0';
+            downloadAppModal.style.opacity = '0';
+        }
+    });
+    // Close modal when clicking outside
+    document.addEventListener('click', function(e) {
+        if (modalOpen && !downloadAppContainer.contains(e.target)) {
+            downloadAppModal.style.maxHeight = '0';
+            downloadAppModal.style.opacity = '0';
+            modalOpen = false;
+        }
+    });
+</script>

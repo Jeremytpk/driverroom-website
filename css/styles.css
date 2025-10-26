@@ -6,6 +6,7 @@ body {
 
 /* Custom colors from the logo */
 .bg-brand-teal { background-color: #2D8F8B; }
+.text-brand-teal2 { color: #222727; }
 .text-brand-teal { color: #2D8F8B; }
 .border-brand-teal { border-color: #2D8F8B; }
 .bg-brand-salmon { background-color: #E86A5D; }

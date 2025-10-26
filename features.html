@@ -7,12 +7,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for brand colors */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-brand-teal { background-color: #008080; }
+        .text-brand-salmon { color: #FA8072; }
+        .hover\:text-brand-salmon:hover { color: #FA8072; }
+        .bg-brand-teal-light { background-color: #F0FFFF; }
+    </style>
 </head>
-<body class="antialiased">
+<body class="antialiased bg-white">
 
-    <!-- Header -->
     <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3">
@@ -21,70 +29,126 @@
             </a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="index.html" class="nav-link text-gray-600 hover:text-brand-salmon transition-colors duration-300">Home</a>
-                <a href="features.html" class="nav-link text-gray-600 hover:text-brand-salmon transition-colors duration-300">Features</a>
+                <a href="features.html" class="nav-link text-brand-salmon font-semibold transition-colors duration-300">Features</a>
                 <a href="pricing.html" class="nav-link text-gray-600 hover:text-brand-salmon transition-colors duration-300">Pricing</a>
                 <a href="about.html" class="nav-link text-gray-600 hover:text-brand-salmon transition-colors duration-300">About Us</a>
             </div>
             <a href="contact.html" class="hidden md:block bg-brand-teal text-white font-semibold px-5 py-2 rounded-lg hover:bg-opacity-90 transition-transform duration-300 hover:scale-105">
                 Contact Us
             </a>
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="md:hidden">
                 <svg class="w-6 h-6 text-gray-800" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </nav>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
             <a href="index.html" class="mobile-nav-link block py-2 text-gray-600 hover:text-brand-salmon">Home</a>
-            <a href="features.html" class="mobile-nav-link block py-2 text-gray-600 hover:text-brand-salmon">Features</a>
+            <a href="features.html" class="mobile-nav-link block py-2 text-brand-salmon font-semibold">Features</a>
             <a href="pricing.html" class="mobile-nav-link block py-2 text-gray-600 hover:text-brand-salmon">Pricing</a>
             <a href="about.html" class="mobile-nav-link block py-2 text-gray-600 hover:text-brand-salmon">About Us</a>
             <a href="contact.html" class="mobile-nav-link block mt-4 bg-brand-teal text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-opacity-90">Contact Us</a>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Features Section -->
-        <section id="features" class="page-section bg-white">
-            <div class="container mx-auto px-6 py-20">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-900">Built for Modern Delivery Teams</h2>
-                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Everything you need to manage your operations and empower your drivers.</p>
+        <section class="bg-gray-50">
+             <div class="container mx-auto px-6 py-20 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 tracking-tight">Powerful Features for a Secure Fleet</h1>
+                <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-600">Built to secure your operations, save time, and improve driver morale.</p>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold text-gray-900">An Indispensable Tool for Every Driver</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">DriverRoom replaces guesswork and frustration with efficiency and control. Key driver-facing features include:</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <!-- Feature Card 1 -->
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
-                        <div class="bg-brand-teal/10 text-brand-teal rounded-full h-12 w-12 flex items-center justify-center mb-5">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="flex space-x-4">
+                        <div class="flex-shrink-0"><svg class="h-7 w-7 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Verified Gate Code Database</h3>
+                            <p class="mt-1 text-gray-600">Instant, real-time access to a shared, company-verified database of gate codes, eliminating delays and potential security risks.</p>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Team Communication</h3>
-                        <p class="text-gray-600">Centralize team chats, direct messages, and important announcements to keep everyone in sync, whether on the road or at the station.</p>
                     </div>
-                    <!-- Feature Card 2 -->
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
-                         <div class="bg-brand-teal/10 text-brand-teal rounded-full h-12 w-12 flex items-center justify-center mb-5">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <div class="flex space-x-4">
+                        <div class="flex-shrink-0"><svg class="h-7 w-7 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Proactive Communication</h3>
+                            <p class="mt-1 text-gray-600">View daily safety tips and important company announcements directly in the app.</p>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Safety & Compliance</h3>
-                        <p class="text-gray-600">Push daily safety tips and critical notices directly to your drivers' devices, ensuring everyone is aware of the latest protocols and procedures.</p>
                     </div>
-                    <!-- Feature Card 3 -->
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
-                        <div class="bg-brand-teal/10 text-brand-teal rounded-full h-12 w-12 flex items-center justify-center mb-5">
-                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21v-1a6 6 0 00-5.173-5.97m0 0A5.986 5.986 0 009 9c0-3.314 2.686-6 6-6s6 2.686 6 6c0 1.282-.395 2.472-1.054 3.493M9 9a3 3 0 110-6 3 3 0 010 6z"></path></svg>
+                    <div class="flex space-x-4">
+                        <div class="flex-shrink-0"><svg class="h-7 w-7 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg></div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Secure Messaging</h3>
+                            <p class="mt-1 text-gray-600">Facilitates secure one-on-one and group chats for better fleet communication.</p>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">DSP Administration</h3>
-                        <p class="text-gray-600">Effortlessly manage drivers, assign roles, track on-duty status, and monitor daily check-ins from a powerful and intuitive admin dashboard.</p>
                     </div>
+                    <div class="flex space-x-4">
+                        <div class="flex-shrink-0"><svg class="h-7 w-7 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Rescue Management</h3>
+                            <p class="mt-1 text-gray-600">See detailed assignments for rescue missions to seamlessly support colleagues.</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <div class="flex-shrink-0"><svg class="h-7 w-7 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">On-Duty Status</h3>
+                            <p class="mt-1 text-gray-600">Easily check in to a route, signifying on-duty status to the management system.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold text-gray-900">Comprehensive Controls for Management</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Maintain complete oversight of your fleet with powerful, easy-to-use tools. Key management-facing features include:</p>
+                </div>
+                <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-center items-center h-16 w-16 bg-brand-teal text-white rounded-full mx-auto">
+                            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                        </div>
+                        <h3 class="mt-5 text-xl font-semibold text-gray-800">Total Fleet Management</h3>
+                        <p class="mt-2 text-gray-600">Track route status, manage driver accounts, and communicate with your entire fleet from one central dashboard.</p>
+                    </div>
+                    <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-center items-center h-16 w-16 bg-brand-teal text-white rounded-full mx-auto">
+                            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" /></svg>
+                        </div>
+                        <h3 class="mt-5 text-xl font-semibold text-gray-800">Analytics and Reporting</h3>
+                        <p class="mt-2 text-gray-600">Gain actionable insights into route efficiency, driver performance, and common gate-related delays with comprehensive reports.</p>
+                    </div>
+                    <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex justify-center items-center h-16 w-16 bg-brand-teal text-white rounded-full mx-auto">
+                            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        </div>
+                        <h3 class="mt-5 text-xl font-semibold text-gray-800">Role-Based Access Control</h3>
+                        <p class="mt-2 text-gray-600">Ensure sensitive gate code information is only visible to on-duty drivers and authorized personnel, maintaining a high level of security.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-brand-teal">
+            <div class="container mx-auto px-6 py-16 text-center">
+                <h2 class="text-3xl font-bold text-white">Ready to Transform Your Fleet?</h2>
+                <p class="mt-2 text-lg text-gray-200">Explore our packages or get in touch for a personalized quote.</p>
+                <div class="mt-8 flex justify-center space-x-4">
+                    <a href="pricing.html" class="bg-white text-brand-teal font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-300">View Pricing</a>
+                    <a href="contact.html" class="bg-brand-salmon text-white font-semibold px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors duration-300">Contact Us</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -108,13 +172,13 @@
                     <ul class="space-y-2">
                         <li><a href="privacy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
                         <li><a href="terms.html" class="text-gray-400 hover:text-white">Terms of Service</a></li>
-                     </ul>
+                    </ul>
                 </div>
                 <div>
                     <h4 class="font-semibold text-lg mb-4">Contact Us</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li>contact@driverroom.com</li>
-                        <li>123 Delivery Lane, Atlanta, GA</li>
+                        <li><a href="mailto:contact@driverroom.dev">contact@driverroom.dev</a></li>
+                        <li></li>
                     </ul>
                 </div>
             </div>
@@ -124,6 +188,14 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
