@@ -188,9 +188,14 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.564 13.438c-.021-2.063 1.688-3.053 1.763-3.099-1.012-1.479-2.581-1.684-3.136-1.707-1.334-.135-2.604.781-3.282.781-.677 0-1.722-.762-2.834-.742-1.456.021-2.803.854-3.555 2.172-1.521 2.637-.389 6.537 1.093 8.677.724 1.045 1.583 2.221 2.715 2.178 1.096-.043 1.509-.701 2.834-.701 1.325 0 1.691.701 2.834.68 1.174-.021 1.914-1.064 2.637-2.111.833-1.221 1.176-2.402 1.197-2.463-.026-.012-2.297-.881-2.319-3.492zm-2.021-6.563c.604-.729 1.012-1.742.901-2.775-.872.035-1.924.582-2.553 1.311-.561.646-1.057 1.684-.87 2.67.921.071 1.868-.467 2.522-1.206z"/></svg>
                     Download for iOS
                 </a>
-                <a href="#" class="bg-gray-800 text-white font-semibold py-3 rounded-lg text-center opacity-50 cursor-not-allowed">
-                    Download for Android (Coming Soon)
-                </a>
+                <button id="download-android-btn" class="bg-green-600 text-white font-semibold py-3 rounded-lg text-center hover:bg-green-700 transition">Download for Android</button>
+            </div>
+            <div id="android-confirmation" class="hidden mt-6 p-4 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 rounded">
+                <p>This file is an APK for Android. Please confirm you want to download <b>driverroom_app.apk</b>.<br>Until the app is live on the Play Store, you must install it manually.</p>
+                <div class="mt-4 flex justify-center gap-4">
+                    <a id="confirm-android-download" href="files/driverroom_app.apk" download class="bg-brand-teal text-white font-semibold px-5 py-2 rounded-lg hover:bg-opacity-90">Download APK</a>
+                    <button id="cancel-android-download" class="bg-gray-300 text-gray-700 font-semibold px-5 py-2 rounded-lg hover:bg-gray-400">Cancel</button>
+                </div>
             </div>
             <button id="close-modal" class="mt-8 w-full py-2 rounded-lg bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition">Close</button>
         </div>
@@ -221,6 +226,25 @@
 
         downloadBtn.addEventListener('click', openDownloadModal);
         downloadBtnMobile.addEventListener('click', openDownloadModal);
+
+        // Android download confirmation logic
+        const downloadAndroidBtn = document.getElementById('download-android-btn');
+        const androidConfirmation = document.getElementById('android-confirmation');
+        const confirmAndroidDownload = document.getElementById('confirm-android-download');
+        const cancelAndroidDownload = document.getElementById('cancel-android-download');
+
+        if (downloadAndroidBtn) {
+            downloadAndroidBtn.addEventListener('click', function() {
+                androidConfirmation.classList.remove('hidden');
+                downloadAndroidBtn.classList.add('hidden');
+            });
+        }
+        if (cancelAndroidDownload) {
+            cancelAndroidDownload.addEventListener('click', function() {
+                androidConfirmation.classList.add('hidden');
+                downloadAndroidBtn.classList.remove('hidden');
+            });
+        }
 
         closeModal.addEventListener('click', () => {
             modal.classList.add('opacity-0', 'pointer-events-none');
